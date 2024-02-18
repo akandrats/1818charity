@@ -8,17 +8,10 @@
 	text-align: center;
 	font-weight: normal;
   }
-.h2 {
-	font-family: 'Lato', sans-serif;
-	font-size: 36px;
-	text-align: center;
-	font-weight: normal;
-  }
-.marquee-text {
+.error-text {
 	font-family: 'Lato', sans-serif;
 	font-size: 246px;
-	display: inline-block;
-	white-space: nowrap;
+	text-align: center;
 }
 .instagram-icon {
 	display: block;
@@ -27,34 +20,8 @@
 	width: 35px; 
 	height: 35px;
   }
-.backButton {
-	background-color: white;
-	color: black;
-	border: 1px solid black; /* Green */
-	font-family: 'Lato', sans-serif;
-	font-weight: normal;
-	font-size: 16px;
-	display: block;
-	text-align: center;
-	width: 120px; 
-    height: 40px;
-  }
-#dataList {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 20px;
-	max-height: 1300px; 
-	overflow-y: auto;
-  }
-  li {
-	list-style: none;
-  }
-  img {
-	width: 350px;
-	height: 550px;
-  }
 @media screen and (max-width: 480px) {
-	.marquee-text {
+	.error-text {
 	  font-size: 30px;
 	}
 	.instagram-icon {
@@ -63,7 +30,7 @@
 	  }
   }
 @media screen and (max-width: 600px) {
-	.marquee-text {
+	.error-text {
 	  font-size: 50px;
 	}
 	.instagram-icon {
@@ -72,11 +39,11 @@
 	  }
   }
 @media screen and (max-width: 900px) {
-	.marquee-text {
+	.error-text {
 	  font-size: 106px;
 	}
   }
-	</style>
+</style>
 </head>
 <body>
 <div id="title">
@@ -85,7 +52,7 @@
 </div>
 
 <div>
-
+	<h1 class="error-text" style="text-align: center;">Opps</h1>
 </div>
 
 <div id="social-media">
