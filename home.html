@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<style>
-		.h1 {
+<style>
+.h1 {
 	font-family: 'Lato', sans-serif;
 	font-size: 48px;
 	text-align: center;
@@ -16,16 +16,24 @@
   }
 .marquee-text {
 	font-family: 'Lato', sans-serif;
-	font-size: 246px;
+	font-size: 248px;
 	display: inline-block;
 	white-space: nowrap;
+}
+.marquee-container {
+    justify-content: space-between;
+}
+
+.marquee-container marquee {
+    margin: 0;
+    padding: 0;
 }
 .instagram-icon {
 	display: block;
 	margin: 0 auto;
 	text-align: center;
-	width: 35px; 
-	height: 35px;
+	width: 25px; 
+	height: 25px;
   }
 .backButton {
 	background-color: white;
@@ -81,21 +89,18 @@
 <body>
 <div id="title">
 	<h1 class="h1">1818 CHARITY</h1>
-	<br>
 </div>
 
-<div>
+<div class="marquee-container">
 	<marquee behavior="scroll" direction="left" scrollamount="25" scrolldelay="25"><span class="marquee-text">SOON</span></marquee>
 	<marquee behavior="scroll" direction="right" scrollamount="25" scrolldelay="25"><span class="marquee-text">SOON</span></marquee>
 	<marquee behavior="scroll" direction="left" scrollamount="25" scrolldelay="25"><span class="marquee-text">SOON</span></marquee>
 </div>
 
 <div id="social-media">
-	<br>
 	<a href="https://www.instagram.com/1818charity">
 		<img class="instagram-icon" width="50" height="50" src="https://img.icons8.com/ios/50/instagram-new--v1.png" alt="Instagram"/>
 	</a>
-	<br>
 </div>
 </body>
 </html>

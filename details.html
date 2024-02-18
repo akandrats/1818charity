@@ -86,37 +86,7 @@
 
 <div id="details">
 	<br>
-	<script>
-        // Function to extract ID from URL query parameter
-        function getIdFromUrl() {
-            var urlParams = new URLSearchParams(window.location.search);
-            return urlParams.get('id');
-        }
-
-        // Function to fetch details by ID
-        function fetchDetails(id) {
-            fetch('https://script.google.com/macros/s/AKfycbz6_XzIBBQdouBw3qY6xUzrXKnciFhSZS4A912i4XhB2G2dkRlWCZqvSnhIF0vpvblE/exec?id=' + id)
-                .then(response => response.json())
-                .then(data => {
-                    // Display details on the page
-                    var detailsDiv = document.getElementById('details');
-                    detailsDiv.innerHTML = `<h2>Details</h2>
-                                            <p>ID: ${data.id}</p>
-                                            <p>Name: ${data.name}</p>
-                                            <p>Image:</p>
-                                            <img src="${data.imageUrl}" alt="${data.name}" style="max-width: 100%;" />`;
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                });
-        }
-
-        // Get the ID from the URL query parameter
-        var id = getIdFromUrl();
-
-        // Call fetchDetails with the extracted id
-        fetchDetails(id);
-    </script>
+	<script src="./js/fetchData.js"></script>
 	<br>
 </div>
 

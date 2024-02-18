@@ -88,42 +88,7 @@
 	<br>
 	<h1 class="h2">Catalog</h1>
 	<ul id="dataList"></ul>
-  
-	<script>
-	  function fetchData() {
-		fetch('https://script.google.com/macros/s/AKfycbz6_XzIBBQdouBw3qY6xUzrXKnciFhSZS4A912i4XhB2G2dkRlWCZqvSnhIF0vpvblE/exec')
-		  .then(response => response.json())
-		  .then(data => {
-			data.shift();
-			displayData(data);
-		  })
-		  .catch(error => console.error('Error fetching data:', error));
-	  }
-  
-	  function displayData(data) {
-		var dataList = document.getElementById('dataList');
-		data.forEach(function(item) {
-		  var listItem = document.createElement('li');
-		  // Name
-		  var nameElement = document.createElement('p');
-		  nameElement.textContent = item.name;
-		  listItem.appendChild(nameElement);
-		  // Image
-		  var imgLink = document.createElement('a');
-		  imgLink.href = './details.html?id=' + item.id; // Redirect to /details with id
-		  var imgElement = document.createElement('img');
-		  imgElement.src = item.imageUrl;
-		  imgElement.alt = 'Image';
-		  imgLink.appendChild(imgElement);
-		  listItem.appendChild(imgLink);
-		  // Append name after image
-		  listItem.appendChild(nameElement);
-		  dataList.appendChild(listItem);
-		});
-	  }
-  
-	  window.onload = fetchData;
-	</script>
+	<script src="./js/fetchData.js"></script>
 	<br>
 </div>
 
